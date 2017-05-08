@@ -7,6 +7,7 @@
 	<li>clone project,</li> 
 	<li>switch to project directory,</li> 
 	<li>install dependencies (in terminal, type <code>npm install</code>),</li> 
+	<li>build React bundle (in terminal, type <code>webpack -i</code>)</li>
 	<li>run project (in terminal, type <code>npm start</code>)</li> 
 	<li>view in browser, localhost:3000</li> 
 </ul>
