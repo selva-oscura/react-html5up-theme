@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Footer } from './components';
+import { Footer, Section } from './components';
 
 class App extends Component {
 	render(){
@@ -20,32 +20,8 @@ class App extends Component {
 					</div>
 				</section>
 
-				<section className="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-					<div className="content">
-						<h2>Magna etiam feugiat</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-						<ul className="actions vertical">
-							<li><a href="#" className="button">Learn More</a></li>
-						</ul>
-					</div>
-					<div className="image">
-						<img src="images/spotlight01.jpg" alt="" />
-					</div>
-				</section>
-
-				<section className="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-					<div className="content">
-						<h2>Tempus adipiscing</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-						<ul className="actions vertical">
-							<li><a href="#" className="button">Learn More</a></li>
-						</ul>
-					</div>
-					<div className="image">
-						<img src="images/spotlight02.jpg" alt="" />
-					</div>
-				</section>
-
+				<Section />
+				
 				<section className="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 					<div className="content">
 						<h2>Pharetra etiam nulla</h2>
