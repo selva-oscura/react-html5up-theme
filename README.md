@@ -7,5 +7,5 @@
 	<li>clone project,</li> 
 	<li>switch to project directory,</li> 
 	<li>install dependencies (in terminal, type <code>npm install</code>),</li> 
-	<li>run project (in terminal, type <code>node start</code>)</li> 
+	<li>run project (in terminal, type <code>npm start</code>)</li> 
 </ul>
