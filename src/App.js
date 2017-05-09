@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Footer, Gallery, Splash, Spotlight } from './components';
 
+const galleryFiller = [];
+for(let i = 1; i<=12; i++){
+	galleryFiller.push({
+		title: `Title ${i}`,
+		text: `More blah, blah, blah filler text for gallery item ${i}`,
+		callToAction: `Click Me ${i}`,
+		image: i
+	});
+}
+
 class App extends Component {
 	render(){
 		return(
@@ -45,7 +55,11 @@ class App extends Component {
 				/>
 
 
-				<Gallery />
+				<Gallery 
+					sectionHeadTitle="Gallery"
+					sectionHeadText="Some text for the head of that Gallery.  Go, Gallery, Go!"
+					galleryItems={galleryFiller}
+				/>
 
 				<section className="wrapper style1 align-center">
 					<div className="inner">
