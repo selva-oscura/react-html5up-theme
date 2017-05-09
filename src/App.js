@@ -20,8 +20,36 @@ class App extends Component {
 					</div>
 				</section>
 
-				<Section />
-				
+				<Section
+					orient="right"
+					title="Header 1"
+					text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet."
+					callToAction="Learn More"
+					image="spotlight01"
+				/>
+
+				<Section
+					orient="left"
+					title="Header 2"
+					text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet."
+					callToAction="Learn More"
+					image="spotlight02"
+				/>
+				<Section
+					orient="right"
+					title="Header 3"
+					text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet."
+					callToAction="Details"
+					image="spotlight03"
+				/>
+				<Section
+					orient="left"
+					title="Header 4"
+					text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet."
+					callToAction="Details"
+					image="spotlight01"
+				/>
+
 				<section className="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 					<div className="content">
 						<h2>Pharetra etiam nulla</h2>
