@@ -7,7 +7,12 @@ class App extends Component {
 		return(
 			<div id="wrapper" className="divided">
 
-				<Splash />
+				<Splash 
+					title="Splash"
+					text="A bunch of text here as the blah, blah, blah for the site. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum."
+					callToAction="Do Something"
+					image="banner"
+				/>
 		
 				<Spotlight
 					orient="right"
