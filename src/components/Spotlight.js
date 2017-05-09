@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Section = (props) => {
-	console.log('props', props)
-	// const orient = props.orient || 'right';
-	// const orient = 'orient-right';
-	const containerClass = 'spotlight style1 orient-' + props.orient + ' content-align-left image-position-center onscroll-image-fade-in ';
+const Spotlight = (props) => {
+	// console.log('props', props)
+	const orient = props.orient || 'right';
+	const containerClass = 'spotlight style1 orient-' + orient + ' content-align-left image-position-center onscroll-image-fade-in ';
 	return (
 		<section className={containerClass} id="first">
 			<div className="content">
@@ -21,4 +20,4 @@ const Section = (props) => {
 	)
 }
 
-export default Section;
+export default Spotlight;

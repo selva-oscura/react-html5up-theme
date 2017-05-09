@@ -1,7 +1,7 @@
 import Footer from './Footer';
-import Section from './Section';
+import Spotlight from './Spotlight';
 
 export {
 	Footer,
-	Section
+	Spotlight
 }

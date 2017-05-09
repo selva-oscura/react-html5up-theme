@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Footer, Section } from './components';
+import { Footer, Spotlight } from './components';
 
 class App extends Component {
 	render(){
@@ -20,7 +20,7 @@ class App extends Component {
 					</div>
 				</section>
 
-				<Section
+				<Spotlight
 					orient="right"
 					title="Header 1"
 					text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet."
@@ -28,21 +28,21 @@ class App extends Component {
 					image="spotlight01"
 				/>
 
-				<Section
+				<Spotlight
 					orient="left"
 					title="Header 2"
-					text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet."
-					callToAction="Learn More"
+					text="More text here. Blah, blah, blah....."
+					callToAction="Details"
 					image="spotlight02"
 				/>
-				<Section
+				<Spotlight
 					orient="right"
 					title="Header 3"
 					text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet."
 					callToAction="Details"
 					image="spotlight03"
 				/>
-				<Section
+				<Spotlight
 					orient="left"
 					title="Header 4"
 					text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet."
