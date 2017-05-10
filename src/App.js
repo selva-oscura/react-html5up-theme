@@ -79,9 +79,36 @@ class App extends Component {
 					items={itemsFiller}
 				/>
 
-				<FormArea 
-				/>
+				<FormArea
+					callToAction="GetInTouch"
+					form={[
+						{
+							type: 	"text",
+							id: 		"name",
+							label: 	"Name",
+							layout: "half first",
+						},
+						{
+							type: 	"email",
+							id: 		"email",
+							label: 	"Email",
+							layout: "half",
+						},
+						{
+							type: 	"textarea",
+							id: 		"message",
+							label: 	"Message",
+							layout: "",
+							rows: 	"6",
 
+						},
+						{
+							type: 	"submit",
+							id: 		"submit",
+							text: 	"Send Message",
+						},
+					]}
+				/>
 				<Footer />
 			</div>
 		)
