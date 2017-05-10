@@ -11,6 +11,18 @@ for(let i = 1; i<=12; i++){
 		image: i
 	});
 }
+const itemsFiller = [];
+let itemTitleText = "Lorem ipsum dolor sit amet consectetur adipiscing elit Morbi id ante sed";
+const itemTitleArr = itemTitleText.split(" ");
+const images = ["diamond", "save", "bar-chart", "wifi", "cog", "paper-plane", "desktop", "refresh", "hashtag", "bolt", "envelope", "leaf"];
+const itemTextFiller = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit";
+for(let i = 0; i<12; i++){
+	itemsFiller.push({
+		title: itemTitleArr[i],
+		text: itemTextFiller.slice(i*5).concat(itemTextFiller.slice(0,i*5)),
+		image: "fa-"+images[i]
+	});
+}
 
 class App extends Component {
 	render(){
@@ -64,7 +76,7 @@ class App extends Component {
 				<Items
 					sectionHeadTitle="Items"
 					sectionHeadText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum"
-					sectionItems=""
+					items={itemsFiller}
 				/>
 
 				<section className="wrapper style1 align-center">
