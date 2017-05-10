@@ -5,11 +5,15 @@ import ItemsBody from './ItemsBody';
 const Items = (props) => {
 	return(
 		<section className="wrapper style1 align-center">
+
 			<SectionHead 
 				title={props.sectionHeadTitle}
 				text={props.sectionHeadText}
 			/>
-			<ItemsBody />			
+			
+			<ItemsBody
+				items={props.items}
+			/>
 
 		</section>
 	)
