@@ -61,8 +61,12 @@ class App extends Component {
 					galleryItems={galleryFiller}
 				/>
 
-				<Items />
-				
+				<Items
+					sectionHeadTitle="Items"
+					sectionHeadText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum"
+					sectionItems=""
+				/>
+
 				<section className="wrapper style1 align-center">
 					<div className="inner medium">
 						<h2>Get in touch</h2>
