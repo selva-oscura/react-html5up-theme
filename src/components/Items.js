@@ -1,11 +1,14 @@
 import React from 'react';
+import SectionHead from './SectionHead';
 
 const Items = (props) => {
 	return(
 		<section className="wrapper style1 align-center">
+			<SectionHead 
+				title={props.sectionHeadTitle}
+				text={props.sectionHeadText}
+			/>
 			<div className="inner">
-				<h2>Ipsum sed consequat</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
 				<div className="items style1 medium onscroll-fade-in">
 					<section>
 						<span className="icon style2 major fa-diamond"></span>
