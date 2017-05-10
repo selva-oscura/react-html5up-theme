@@ -2,7 +2,6 @@ import React from 'react';
 import Item from './Item';
 
 const ItemsBody = (props) => {
-	console.log('props from ItemsBody', props);
 	return (
 		<div className="inner">
 			<div className="items style1 medium onscroll-fade-in">

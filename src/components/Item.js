@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Item = (props) => {
-	console.log('props from Item',props);
 	const iconClass ="icon style2 major " + props.image;
 	return(
 		<section>
