@@ -95,19 +95,6 @@ class App extends Component {
 							layout: "half",
 						},
 						{
-							type: 	"textarea",
-							id: 		"message",
-							label: 	"Message",
-							layout: "",
-							rows: 	"6",
-
-						},
-						{
-							type: 	"submit",
-							id: 		"submit",
-							text: 	"Send Message",
-						},
-						{
 							type: 	"radio",
 							id: 		"true",
 							label: 	"Team Semi-Colon!",
@@ -120,6 +107,40 @@ class App extends Component {
 							label: 	"Semicolons Must Die!",
 							name: 	"semicolon",
 							layout: "half",
+						},
+						{
+							type: 	"textarea",
+							id: 		"message",
+							label: 	"Message",
+							layout: "",
+							rows: 	"6",
+
+						},
+						{
+							type: 	"checkbox",
+							id: 		"human",
+							label: 	"I'm a human",
+							name: 	"human",
+							layout: "third first",
+						},
+						{
+							type: 	"checkbox",
+							id: 		"email-me",
+							label: 	"Send Me a Copy of this E-Mail",
+							name: 	"email-me",
+							layout: "third",
+						},
+						{
+							type: 	"checkbox",
+							id: 		"mailing-list",
+							label: 	"Add Me to Mailing List",
+							name: 	"mailing-list",
+							layout: "third",
+						},
+						{
+							type: 	"submit",
+							id: 		"submit",
+							text: 	"Send Message",
 						},
 					]}
 				/>

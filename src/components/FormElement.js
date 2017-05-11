@@ -38,6 +38,13 @@ const FormElement = (props) => {
 				</div>
 			)
 		case "checkbox":
+			layout+=props.formElement.layout || "";
+			return (
+				<div className={layout}>
+					<input type={props.formElement.type} id={props.formElement.id} name={props.formElement.name} />
+					<label htmlFor={props.formElement.id}>{props.formElement.label}</label>
+				</div>
+			)
 		case "color":
 		case "date":
 		case "datetime-local":
