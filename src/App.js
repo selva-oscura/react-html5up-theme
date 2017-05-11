@@ -107,6 +107,20 @@ class App extends Component {
 							id: 		"submit",
 							text: 	"Send Message",
 						},
+						{
+							type: 	"radio",
+							id: 		"true",
+							label: 	"Team Semi-Colon!",
+							name: 	"semicolon",
+							layout: "half first",
+						},
+						{
+							type: 	"radio",
+							id: 		"false",
+							label: 	"Semicolons Must Die!",
+							name: 	"semicolon",
+							layout: "half",
+						},
 					]}
 				/>
 				<Footer />
