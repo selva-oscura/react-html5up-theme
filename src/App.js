@@ -25,6 +25,42 @@ for(let i = 0; i<12; i++){
 }
 
 class App extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			form: {
+				name: "",
+				email: "",
+				semicolon: "",
+				message: "",
+				human: false,
+				emailMe: false,
+				mailingList: false,
+				responses: ["a response", "and another"],
+				errors: ["an error", "and another"],
+			}
+		}
+		this.updateFormState = this.updateFormState.bind(this);
+		this.submitMailForm = this.submitMailForm.bind(this);
+	}
+	updateFormState(e){
+		console.log(e.target.id, e.target.value, e.target.type);
+		let form = this.state.form;
+		if(e.target.type === "checkbox"){
+			form[e.target.id]=!form[e.target.id];
+		}else if(e.target.type==="radio"){
+			form[e.target.name]=e.target.id;
+		}else{
+			form[e.target.id]=e.target.value;
+		}
+		form.responses=[];
+		form.errors=[];
+		this.setState({form});
+		console.log('state.form', this.state.form)
+	}
+	submitMailForm(){
+		console.log('submitMailForm stub');
+	}
 	render(){
 		return(
 			<div id="wrapper" className="divided">
@@ -66,7 +102,6 @@ class App extends Component {
 					image="spotlight01"
 				/>
 
-
 				<Gallery 
 					sectionHeadTitle="Gallery"
 					sectionHeadText="Some text for the head of that Gallery.  Go, Gallery, Go!"
@@ -80,7 +115,10 @@ class App extends Component {
 				/>
 
 				<FormArea
-					callToAction="GetInTouch"
+					formState={this.state.form}
+					updateFormState={this.updateFormState}
+					submitMailForm={this.submitMailForm}
+					callToAction="Get In Touch"
 					form={[
 						{
 							type: 	"text",
@@ -125,16 +163,16 @@ class App extends Component {
 						},
 						{
 							type: 	"checkbox",
-							id: 		"email-me",
+							id: 		"emailMe",
 							label: 	"Send Me a Copy of this E-Mail",
-							name: 	"email-me",
+							name: 	"emailMe",
 							layout: "third",
 						},
 						{
 							type: 	"checkbox",
-							id: 		"mailing-list",
+							id: 		"mailingList",
 							label: 	"Add Me to Mailing List",
-							name: 	"mailing-list",
+							name: 	"mailingList",
 							layout: "third",
 						},
 						{
