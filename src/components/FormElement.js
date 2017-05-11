@@ -2,6 +2,7 @@ import React from 'react';
 
 const FormElement = (props) => {
 	let layout="field ";
+	let checked;
 	switch(props.formElement.type){
 		case "text":
 		case "number":
@@ -11,7 +12,13 @@ const FormElement = (props) => {
 			return (
 				<div className={layout}>
 					<label htmlFor={props.formElement.id}>{props.formElement.label}</label>
-					<input type={props.formElement.type} name={props.formElement.id} id={props.formElement.id} value="" />
+					<input
+						type={props.formElement.type}
+						name={props.formElement.id}
+						id={props.formElement.id}
+						value={props.formState[props.formElement.id]}
+						onChange={props.updateFormState}
+					/>
 				</div>
 			)
 		case "textarea":
@@ -20,31 +27,61 @@ const FormElement = (props) => {
 			return (
 				<div className={layout}>
 					<label htmlFor={props.formElement.id}>{props.formElement.label}</label>
-					<textarea name={props.formElement.id} id={props.formElement.id} rows={rows}></textarea>
+					<textarea
+						name={props.formElement.id}
+						id={props.formElement.id}
+						rows={rows}
+						onChange={props.updateFormState}
+						value={props.formState[props.formElement.id]}
+					>
+					</textarea>
 				</div>
 			)
 		case "submit":
 			return (
 				<ul className="actions">
-					<li><input type="submit" name={props.formElement.id} id={props.formElement.id} value={props.formElement.text} /></li>
+					<li>
+						<input
+							type="submit"
+							name={props.formElement.id}
+							id={props.formElement.id}
+							value={props.formElement.text}
+							onClick={props.submitMailForm}
+						/>
+					</li>
 				</ul>
 			)
 		case "radio":
 			layout+=props.formElement.layout || "";
+			props.formState[props.formElement.name]==props.formElement.id ? checked = true: checked = false;
 			return (
 				<div className={layout}>
-					<input type={props.formElement.type} id={props.formElement.id} name={props.formElement.name} />
+					<input
+						type={props.formElement.type}
+						id={props.formElement.id}
+						name={props.formElement.name}
+						defaultChecked={checked}
+						onChange={props.updateFormState}
+					/>
 					<label htmlFor={props.formElement.id}>{props.formElement.label}</label>
 				</div>
 			)
 		case "checkbox":
 			layout+=props.formElement.layout || "";
+			checked = props.formState[props.formElement.name];
 			return (
 				<div className={layout}>
-					<input type={props.formElement.type} id={props.formElement.id} name={props.formElement.name} />
+					<input
+						type={props.formElement.type}
+						id={props.formElement.id}
+						name={props.formElement.name}
+						defaultChecked={props.formState[props.formElement.name]}
+						onChange={props.updateFormState}
+					/>
 					<label htmlFor={props.formElement.id}>{props.formElement.label}</label>
 				</div>
 			)
+		case "select":
 		case "color":
 		case "date":
 		case "datetime-local":
