@@ -36,15 +36,14 @@ class App extends Component {
 				human: false,
 				emailMe: false,
 				mailingList: false,
-				responses: ["a response", "and another"],
-				errors: ["an error", "and another"],
+				responses: [],
+				errors: [],
 			}
 		}
 		this.updateFormState = this.updateFormState.bind(this);
 		this.submitMailForm = this.submitMailForm.bind(this);
 	}
 	updateFormState(e){
-		console.log(e.target.id, e.target.value, e.target.type);
 		let form = this.state.form;
 		if(e.target.type === "checkbox"){
 			form[e.target.id]=!form[e.target.id];
