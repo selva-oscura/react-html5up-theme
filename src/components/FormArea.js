@@ -8,7 +8,7 @@ const FormArea = (props) => {
 		<section className="wrapper style1 align-center">
 			<div className="inner medium">
 				<h2>{props.callToAction}</h2>
-				<form method="post" action="#">
+				<form>
 					{props.form.map((formElement, i) => (
 						<FormElement 
 							key={i}
