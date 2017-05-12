@@ -11,7 +11,7 @@ const Footer = () => {
 					<li><a href="#" className="icon style2 fa-linkedin"><span className="label">LinkedIn</span></a></li>
 					<li><a href="#" className="icon style2 fa-envelope"><span className="label">Email</span></a></li>
 				</ul>
-				<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+				<p>&copy; <span className="icon fa-long-arrow-left"> No... This is an open-source project, but it is using design by</span> <a href="https://html5up.net">HTML5 UP</a> (<a href="https://html5up.net/story">Story Theme</a>).</p>
 			</div>
 		</footer>
 	)
