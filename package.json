@@ -34,7 +34,7 @@
     "webpack": "^2.5.1"
   },
   "scripts": {
-    "start": "nodejs ./bin/www",
+    "start": "nodejs ./bin/www"
   },
   "devDependencies": {
     "gh-pages": "^1.0.0",
