@@ -1,10 +1,16 @@
 {
-  "name": "application-name",
+  "name": "react-html5up-theme",
   "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "nodejs ./bin/www"
+  "description": "React app, running on express, to play with HTML5up and explore how to integrate a theme (Story) with React",
+  "homepage": "https://selva-oscura.github.io/react-html5up-theme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selva-oscura/react-html5up-theme.git"
   },
+  "bugs": {
+    "url": "https://github.com/selva-oscura/react-html5up-theme/issues"
+  },
+  "private": true,
   "dependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -21,5 +27,12 @@
     "react-dom": "^15.5.4",
     "static-favicon": "~1.0.0",
     "webpack": "^2.5.1"
+  },
+  "scripts": {
+    "start": "nodejs ./bin/www",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
   }
 }
