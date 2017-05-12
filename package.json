@@ -2,6 +2,11 @@
   "name": "react-html5up-theme",
   "version": "0.0.1",
   "description": "React app, running on express, to play with HTML5up and explore how to integrate a theme (Story) with React",
+  "keywords": [
+    "React",
+    "HTML5UP"
+  ],
+  "license": "MIT",
   "homepage": "https://selva-oscura.github.io/react-html5up-theme",
   "repository": {
     "type": "git",
@@ -30,7 +35,8 @@
   },
   "scripts": {
     "start": "nodejs ./bin/www",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "npm run predeploy&&gh-pages -d build"
   },
   "devDependencies": {
     "gh-pages": "^1.0.0"
