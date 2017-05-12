@@ -58,8 +58,52 @@ class App extends Component {
 		this.setState({form});
 		console.log('state.form', this.state.form)
 	}
-	submitMailForm(){
-		console.log('submitMailForm stub');
+	submitMailForm(e){
+		e.preventDefault();
+		let form = this.state.form;
+		let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		if(form.name.length===0){
+			form.errors.push("Missing Name");
+		}
+		if(form.email.length===0){
+			form.errors.push("Missing E-Mail Address");
+		}else if(!form.email.match(emailRegex)){
+			form.errors.push("Improperly-Formatted E-Mail Address");
+		}
+		if(form.semicolon===""){
+			form.errors.push("No Position taken vis-à-vis Semi-Colons (VERY Important)");
+		}
+		if(form.message.length===0){
+			form.errors.push("Missing Message");
+		}
+		if(!form.human){
+			form.errors.push("You're apparently not a Human!")
+		}
+		if(form.errors.length===0){
+			form.errors = [];
+			form.responses.push("Thank you. If this were an actual 'Get In Touch' form (rather than just an exploration of React with an HTML5up theme), the following data would have been sent:");
+			form.responses.push(`Name: ${form.name}`);
+			form.responses.push(`E-Mail: ${form.email}`);
+			form.semicolon ? form.responses.push("Team Semi-Colon!") : form.responses.push("Semicolons Must Die!");
+			form.responses.push(`Message: ${form.message}`);
+			form.emailMe ? form.responses.push("Send Me a Copy of this E-Mail") : form.responses.push("Don't Send Me a Copy of this E-Mail");
+			form.mailingList ? form.responses.push("Add Me to the Mailing List") : form.responses.push("Do Not Add Me to the Mailing List");
+			form.name = "";
+			form.email = "";
+			form.message = "";
+			form.semicolon = "";
+			form.human = false;
+			form.emailMe = false;
+			form.mailingList = false;
+		}else{
+			if(form.errors.length===1){
+				form.errors.unshift("Can Not Submit the Form, Due to the Following Problem:");
+			}else{
+				form.errors.unshift("Can Not Submit the Form, Due to the Following Problems:");
+			}
+		}
+		this.setState({form});
+
 	}
 	render(){
 		return(
