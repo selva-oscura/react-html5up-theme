@@ -67,10 +67,9 @@ const FormElement = (props) => {
 				</div>
 			)
 		case "checkbox":
-			console.log(props.formElement.id, props.formState[props.formElement.name])
 			layout+=props.formElement.layout || "";
 			checked = props.formState[props.formElement.name];
-			console.log('checkbox thinks that checked should be', checked)
+			// console.log(props.formElement.id, props.formState[props.formElement.name], 'checkbox thinks that checked should be', checked)
 			return (
 				<div className={layout}>
 					<input
