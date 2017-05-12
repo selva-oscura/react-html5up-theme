@@ -35,10 +35,9 @@
   },
   "scripts": {
     "start": "nodejs ./bin/www",
-    "predeploy": "npm run build",
-    "deploy": "npm run predeploy&&gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^1.0.0"
+    "gh-pages": "^1.0.0",
+    "git-push": "^0.1.1"
   }
 }
