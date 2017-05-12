@@ -41,13 +41,13 @@ const FormElement = (props) => {
 			return (
 				<ul className="actions">
 					<li>
-						<input
-							type="submit"
-							name={props.formElement.id}
+						<div 
 							id={props.formElement.id}
-							value={props.formElement.text}
+							className="button big wide"
 							onClick={props.submitMailForm}
-						/>
+						>
+							{props.formElement.text}
+						</div>
 					</li>
 				</ul>
 			)
@@ -67,15 +67,17 @@ const FormElement = (props) => {
 				</div>
 			)
 		case "checkbox":
+			console.log(props.formElement.id, props.formState[props.formElement.name])
 			layout+=props.formElement.layout || "";
 			checked = props.formState[props.formElement.name];
+			console.log('checkbox thinks that checked should be', checked)
 			return (
 				<div className={layout}>
 					<input
 						type={props.formElement.type}
 						id={props.formElement.id}
 						name={props.formElement.name}
-						defaultChecked={props.formState[props.formElement.name]}
+						defaultChecked={checked}
 						onChange={props.updateFormState}
 					/>
 					<label htmlFor={props.formElement.id}>{props.formElement.label}</label>
